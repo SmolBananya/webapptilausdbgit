@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - TilausDB Demo</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/Home/Index">TilausDB</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Home/Index">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="~/Home/Login">Login <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="~/Home/Logout">Logout <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown show">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">Yrityksestä</a>
+                    <div class="dropdown-menu show" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 42px, 0px); top: 0px; left: 0px; will-change: transform;">
+                        <a class="dropdown-item" href="/Home/About">About</a>
+                        <a class="dropdown-item" href="/Home/Contact">Contact</a>
+                        <div class="dropdown-divider"></div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown show">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">Applikaatiot</a>
+                    <div class="dropdown-menu show" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 42px, 0px); top: 0px; left: 0px; will-change: transform;">
+                        <a class="dropdown-item" href="/Asiakas/Index">Asiakkaat</a>
+                        <a class="dropdown-item" href="/Henkilot/Index">Henkilöt</a>
+                        <a class="dropdown-item" href="/Postitoimipaikat/Index">Postitoimipaikat</a>
+                        <a class="dropdown-item" href="/Tilaus/Index">Tilaukset</a>
+                        <a class="dropdown-item" href="/Tilausrivi/Index">Tilausrivit</a>
+                        <a class="dropdown-item" href="/Tunnistus/Index">Tunnistus</a>
+                        <a class="dropdown-item" href="/Tuotteet/Index2">Tuotteet</a>
+                    </div>
+                </li>
+            </ul>
+            <a class="navbar-brand text-white" href="#">TilausDB (@ViewBag.LoggedStatus)</a>
+        </div>
+    </nav>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - TilausDB Demo</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

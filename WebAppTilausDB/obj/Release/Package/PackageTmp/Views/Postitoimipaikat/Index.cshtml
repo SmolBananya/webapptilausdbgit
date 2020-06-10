@@ -1,0 +1,45 @@
+﻿@model IEnumerable<WebAppTilausDB.Models.Postitoimipaikat>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+    <h2>Postitoimipaikat</h2>
+<br />
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-secondary table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Postinumero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Postitoimipaikka)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Postinumero)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Postitoimipaikka)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Postinumero }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Postinumero }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Postinumero })
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+

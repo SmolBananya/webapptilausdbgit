@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="TilausDBEntities1-Web.config Connection String" description="TilausDBEntities1 Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.TilausDBModel1.csdl|res://*/Models.TilausDBModel1.ssdl|res://*/Models.TilausDBModel1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=smols.database.windows.net;initial catalog=tilausdb;persist security info=True;user id=Smol;password=Lurppa12;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\xim\\Desktop\\careeria\\Tietokantasovellusten\ toteuttaminen\\WebAppTilausDB\\webapptilausdbgit\\WebAppTilausDB\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='TilausDBEntities1']/@connectionString" />
+  </parameter>
+</parameters>

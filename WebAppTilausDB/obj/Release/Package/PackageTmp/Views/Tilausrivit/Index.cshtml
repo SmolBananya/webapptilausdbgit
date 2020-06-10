@@ -1,0 +1,59 @@
+﻿@model IEnumerable<WebAppTilausDB.Models.Tilausrivit>
+@{
+    ViewBag.Title = "Index";
+}
+
+<br />
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-secondary table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Tilaukset)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TilausID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TuoteID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Maara)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ahinta)
+            </th>>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TilausriviID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TilausID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TuoteID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Maara)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ahinta)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.TilausriviID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.TilausriviID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.TilausriviID })
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
