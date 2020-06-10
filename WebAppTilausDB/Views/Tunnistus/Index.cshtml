@@ -1,0 +1,47 @@
+﻿@model IEnumerable<WebAppTilausDB.Models.Tunnistus>
+@{
+    ViewBag.Title = "Index";
+}
+    <h2>Käyttäjät</h2>
+<br />
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-secondary table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LogInID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kayttajatunnus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salasana)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LogInID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Kayttajatunnus)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Salasana)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.LogInID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.LogInID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.LogInID })
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

@@ -1,0 +1,71 @@
+﻿@model IEnumerable<WebAppTilausDB.Models.Henkilot>
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Henkilöt</h2>
+<br />
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-secondary table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Henkilo_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Etunimi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sukunimi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Osoite)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Esimies)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Postinumero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sahkoposti)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Henkilo_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Etunimi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sukunimi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Osoite)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Esimies)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Postinumero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sahkoposti)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Henkilo_id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Henkilo_id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Henkilo_id })
+            </td>
+        </tr>
+        }
+
+    </tbody>
+</table>
